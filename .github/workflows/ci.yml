@@ -1,0 +1,16 @@
+name: Simple CI Test
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Say Hello
+        run: echo "CI pipeline started. Hello from GitHub Actions!"
